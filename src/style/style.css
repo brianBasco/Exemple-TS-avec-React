@@ -1,0 +1,831 @@
+
+/* CSS App scores */
+
+/* jaune wolverines
+background-color: rgb(255, 241, 43);
+*/
+
+/* --------------------  body --------------- */
+.body-scores {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color:rgb(255, 255, 255);
+  color: white;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.body-scores .row {
+  margin: 0;
+  padding-top: 6px;
+}
+
+
+.body-scores h1 {
+  font-size: 2rem;
+}
+
+/* ---------------- appli ------------------- */
+.appli {
+	/* border: 2px solid black; */
+	box-shadow: 2px 2px 3px grey;
+	overflow: hidden;
+	position: relative;
+}
+
+/* --------------- header --------------------- */
+.header {
+	height: 85px;
+	padding: 17px 0;
+	background-color: white;
+	text-align: center;
+  box-shadow: inset 0 0 2px 2px black;
+  background-image: radial-gradient(circle, #004bff -10%, #0093ff 10%, #001221);
+}
+
+.header .btn {
+	background-color: white;
+	color: black;
+	font-weight: bold;
+	border: 2px solid black;
+	height: 50px;
+}
+
+.header div.inline {
+  display: inline-block;
+}
+
+/* --------------------------- menu flottant ---------------- */
+.menuFlottant {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: -350px;
+	width: 350px;
+	transition: left ease-in-out .5s;
+	box-shadow: 0 0 20px 3px rgba(0,0,0,.22);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	text-align: center;
+	background: white;
+	padding: 25px;
+}
+
+.menuFlottant.ferme {
+  left:-350px;  
+}
+
+.menuFlottant button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	background-color: white;
+	color: black;
+	font-weight: bold;
+	border: 2px solid black;
+	height: 50px;
+	box-shadow: 1px 1px 1px 1px #cccc;
+}
+
+.menuFlottant button.fermer {
+	background: #f99;
+	margin-bottom: 40px;
+}
+
+.menuFlottant button.technique {
+  background: yellow;
+}
+
+/* --------------------------- main_content ---------------- */
+
+.main_content {
+	padding-bottom: 30px;
+	background: #0f0e27;
+}
+
+.logo_ffvb {
+  text-align: center;
+  background: white;
+  padding: 10px;
+}
+
+.logo_ffvb img {
+  width: 200px;
+}
+
+.round {
+	position: static;
+	margin: 5px auto;
+	text-transform: uppercase;
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid white;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(255, 241, 43);
+	width: 100%;
+}
+
+
+.round h1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 10px;
+  font-size: 3rem;
+  color: #d5da18;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px #0c99bf;
+}
+
+
+
+.numeroRound {
+  width: 100%;
+  border: none;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 10px;
+  font-size: 3rem;
+  color: #d5da18;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px #0c99bf;
+}
+
+
+/****** ------------- scores ---------------- */
+.scores {
+	position: relative;
+	height: 550px;
+}
+
+.scores-panneau {
+  border: 1px solid white; 
+}
+
+.scores-panneau .container {
+  margin-bottom: 15px;
+}
+
+.container_equipe {
+  padding: 10px 0 10px 0;
+}
+
+.equipe, .nom, .scoreSet {
+  transition: all linear .5s;
+}
+
+.equipe {
+	position: static;
+	height: 70px;
+	width: 100%;
+}
+
+.equipe.gauche {
+  left: 0;
+}
+
+.equipe.droite {
+  right: 0;
+}
+
+.equipe .contenu {
+  position: static;
+}
+
+
+.equipe input{
+  
+  text-align: center;  
+  height: 60px;
+  border-radius: 0;
+  border: none;
+}
+
+.equipe .nom {
+	height: 60px;
+  bottom: 3px;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.equipe .nom.gauche {
+  left: -73px;
+}
+
+.equipe .nom.droite {
+  left: 73px;
+}
+
+.equipe .scoreSet {
+	font-size: 3rem;
+	font-family: 'Teko', sans-serif;
+	width: 27%;
+	text-shadow: 2px 2px 2px rgb(140, 151, 160);
+	position: absolute;
+  border: 2px solid black;
+  bottom: 0;
+  right: 0;
+	height: 70px;
+}
+
+.equipe .scoreSet.droite {
+  right: 73%;
+}
+
+
+.temps-mort div {
+  display: inline-block;
+  width: 50%;
+  padding: 3px;
+}
+
+.temps-mort button {
+	padding: 0;
+	height: 60px;
+	width: 100%;
+	font-size: 12px;
+  border-radius: 0;
+  background-color: rgb(255, 241, 43);
+}
+
+.temps-mort button.true {
+  visibility: visible;
+}
+
+.temps-mort button.false {
+  visibility: hidden;
+}
+
+.bloc_equipe {
+  width: 50%;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  top: -105px;
+}
+
+.bloc_equipe.Adroite {
+  transform: translateX(100%);
+}
+
+.bloc_equipe.Agauche {
+  transform: translateX(-100%);
+}
+
+/* --------------- score ----------------- */
+.score {
+  height: 70px;
+  width: 50%;
+  text-align: center;
+}
+
+.row_btn-score {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	transition: all linear 0.5s;
+}
+
+.score .btn-score{
+  width: 95%;
+  height: 100%;
+  border-radius: 0;
+  border: 2px solid white;
+  background-color: transparent;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain; /* Resize the background image to cover the entire container */
+}
+
+.container_btn {
+  height: 80px;
+}
+
+.container_btn .score {
+  display: inline-block;
+}
+
+.score .btn_plus {  
+  line-height: 0;
+  text-align: center;
+    color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+	text-shadow: 2px 1px 1px #386379;
+	border: 1px solid #3180a7;
+	background: #3b71f3;
+	border-radius: 0px;
+	outline: none;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.7);
+  }
+
+  .score .btn_moins {
+    line-height: 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 1px 1px #386379;
+    border: 1px solid #bc6817;
+    background: #ffef3e;
+    border-radius: 0px;
+    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.5);
+  }
+
+.score .btn_plus:after {
+  content: '+';
+}
+
+.score .btn_moins:after {
+  content: '-';
+}
+
+/* ------------------------ unScore ------------------ */
+.unScore {
+	text-align: center;
+	font-family: 'Teko', sans-serif;
+	text-shadow: 3px 3px 3px rgb(140, 151, 160);
+	margin: 20px auto 20px auto;
+	width: 100%;
+	height: 200px;
+	font-size: 150px;
+	color: rgb(0, 0, 0);
+	background-color: white;
+	border-radius: 0;
+	border: none;
+}
+
+
+.equipe-droite.droite{
+  left: 50%;
+}
+
+.equipe-gauche.droite{
+  left: 50%;
+}
+
+.anime {
+  transition: all 1s cubic-bezier(.64,.2,.3,.94);
+}
+
+.nomEquipe {
+	padding: 5px;
+	background: black;
+	border: none;
+	color: white;
+	font-family: 'Bangers', cursive;
+	font-size: 2rem;}
+
+  .set {
+    position: relative;
+    right: 0px;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    color: #f9ff00;
+    border-radius: 3px;
+    border: 2px solid darkorange;
+  }
+
+  .set input {
+    width: 100%;
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #f9ff00;
+  }
+
+.setEquipe {
+  width: 100%;
+  text-align: center;
+}
+
+.setEquipe input {
+	width: 45%;
+	text-align: center;
+	height: 100px;
+	font-size: 30px;
+	color: red;
+	background: black;
+	border: 2px solid white;
+	margin: 0 auto;
+}
+
+/* CSS des affichages entre 2 sets */
+
+.askUser{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.askUser h1{
+  padding: 20px;
+}
+
+.askUser .col-6{
+  text-align: center;
+}
+
+.askUser button {
+  width: 100%;
+  height: 100px;
+  color: wheat;
+  background-color: black;
+  border: 1px solid wheat;
+  border-radius: 0;
+}
+
+.askUser .btn-ask-score{
+  width: 100%;
+	height: 180px;
+	font-size: 70px;
+	background-color: black;
+	font-family: 'Bangers', cursive;
+	color: white;
+	border-radius: 0;
+}
+
+/* CSS du recap */
+.recap {
+  padding-bottom: 50px;
+  color: black;
+  background: darkorange;
+}
+
+.recap .container{
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.recap .gatorade {
+  /* background: darkorange;
+  box-shadow: inset 0px 1px 1px aliceblue;
+  */
+	color: white;
+	font-style: italic;
+	font-size: 2rem;
+  border: 1px solid grey;
+	background: linear-gradient(to bottom, #4dec35 0%,#6dde28 50%,#28de2a 50%,#85c21f 51%,#46c21f 51%,#c0fe18 100%);
+	box-shadow: 0px 2px 8px 1px black;
+}
+
+.recap .gatorade p {
+	display: inline-block;
+	font-family: 'Bangers', cursive;
+	text-shadow: 1px 1px 4px black;
+}
+
+.recap .gatorade img{
+  width: 100px;
+}
+
+
+.recap .contenu {
+	border: 5px solid;
+	background: linear-gradient(to bottom, #f5f5f5 50%,#d4d4d4 50%,#c9c8c8 50%,#f6dfd9 10%,#f2f2f2 10%,#c9c9c9 100%);
+	box-shadow: inset 0 0px 8px grey;
+}
+
+.recap table{
+  margin: 0 auto;
+}
+
+
+.recap tr, th {
+	padding: 10px;
+	text-align: center;
+	border-bottom: 3px solid #0f0e27;
+	width: 100px;
+}
+
+.recap tr:last-child {
+  border-bottom: none;
+}
+
+.recap input {
+  width: 175px;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0;
+  text-align: center;
+  background: transparent;
+  color: white;
+}
+
+.recap td{
+  padding: 10px;
+}
+
+
+.recap h2{
+  padding-top: 20px;
+  font-size: initial;
+}
+
+.recap button {
+  width: 60px;
+  background-color: wheat;
+  box-shadow: 2px 2px 2px black;
+}
+
+.recap_score {
+  font-weight: bold;
+}
+
+/* Pop-up de confirmation Dialog*/
+.demande {
+	position: fixed;
+	top: 60px;
+	left: 0;
+	right: 0;
+	width: 90%;
+	margin: 0 auto;
+	transition: all ease-in-out 0.5s;
+	box-shadow: 0 0 20px 3px rgba(0,0,0,.22);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border: medium currentColor;
+	text-align: center;
+	background: white;
+	z-index: 1000;
+	color: black;
+  padding: 40px;
+  visibility: visible;
+}
+
+.demande.ferme {  
+  top: -300px;
+  visibility: hidden;
+}
+
+.demande h1 {
+  padding: 30px;
+}
+
+
+
+.demande .btnConfirmation {
+	width: 130px;
+	height: 60px;
+	margin: 10px 20px;
+	position: relative;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 3px;
+	border: 1px solid #4864a9;
+	color: #000;
+	font-size: 0.750em;
+	text-shadow: 1px 1px 0px rgba(255,255,255,.5);
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, .2);
+}
+
+.demande .btnConfirmation.oui {
+  
+  background: #6fee6b;
+}
+ 
+.demande .btnConfirmation.non {
+	background: #ffde2d;
+}
+
+/* CSS du temps Mort technique */
+.tempsMortTechnique {
+	z-index: 3;
+	position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	background-color: rgba(0,0,0,0.9);
+	transition: all ease-in-out 0.5s 0.3s;
+}
+
+.tempsMortTechnique.initial {
+	left: -100%;
+	overflow: hidden;
+}
+
+.tempsMortTechnique .contenu {
+  padding-top: 60px;
+}
+
+.tempsMortTechnique .info{
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.tempsMortTechnique img{
+  width: 80%;
+  margin-top: 40px;
+}
+
+.tempsMortTechnique .btn-tpsMort {
+	width: 100%;
+	height: 140px;
+	font-size: 70px;
+	background-color: black;
+	color: white;
+  border-radius: 0;
+  font-family: 'Encode Sans Condensed', sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.tempsMortTechnique .btn-tpsMort.gauche {
+  color: darkorange;
+}
+
+.tempsMortTechnique .btn-tpsMort.droite {
+  color: cadetblue;
+}
+
+
+.tempsMortTechnique .btn-tpsMort.btn-passer {
+	font-size: 25px;
+	background: linear-gradient(to bottom, #000 0%,#6dde28 50%,#28de2a 50%,#85c21f 51%,#46c21f 51%,#000 100%);
+}
+
+.tempsMortTechnique .btn-tpsMort.chrono {
+  font-size: 60px;
+  background-color:black;
+  color: rgb(231, 114, 36);
+  border: 2px solid white;
+}
+
+
+/* -------------------- CSS tpsMort ----------------------- */
+.tpsMort {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0,0,0,0.9);
+}
+
+.tpsMort .main {
+  text-align: center;
+  padding: 5px;
+}
+
+.tpsMort input, .tpsMort button {
+	width: 100%;
+	background: white;
+	border: none;
+	border-radius: 3px;
+  text-align: center;
+  height: 150px;
+}
+
+.tpsMort .btn {
+	background: cadetblue;
+	color: white;
+  text-shadow: 1px 1px 1px chocolate;
+  font-size: 2rem;
+}
+
+.tpsMort .chrono {
+	background: #000;
+	color: red;
+	border: 2px solid white;
+	font-size: 4rem;
+	text-shadow: 1px 1px 1px darkorange;
+}
+
+.tpsMort .score {
+  font-size: 2rem;
+}
+
+
+/* -------------------- CSS 7 segment digit ----------------------- */
+
+/*
+.digit {
+  width:120px;
+  height:200px;
+  margin:0 5px;
+  position:relative;
+  display:inline-block;
+}
+*/
+.clock {
+  position: relative;
+  height: 135px;
+}
+
+.digit {
+	width: 85px;
+	height: 120px;
+	margin: 5px 5px;
+	position: absolute;
+	display: inline-block;
+	border: 2px solid;
+	transition: all 1s cubic-bezier(.64,.2,.3,.94);
+}
+
+.digit.droite {
+	right: 0;
+}
+
+.digit .segment {
+  /* background:#c00; */
+  background: #d5da18;
+  border-radius:5px;
+  position:absolute;
+  opacity:0.15;
+  
+  transition:opacity 0.2s;
+  -webkit-transition:opacity 0.2s;
+  -ms-transition:opacity 0.2s;
+  -moz-transition:opacity 0.2s;
+  -o-transition:opacity 0.2s;
+}
+
+.digit .segment.on, .separator {
+  opacity:1;
+  box-shadow:0 0 50px rgba(255,0,0,0.7);
+  transition:opacity 0s;
+  -webkit-transition:opacity 0s;
+  -ms-transition:opacity 0s;
+  -moz-transition:opacity 0s;
+  -o-transition:opacity 0s;
+}
+
+.separator {
+  width:20px;
+  height:20px;
+  background:#c00;
+  border-radius:50%;
+  display:inline-block;
+  position:relative;
+  top:-90px;
+}
+
+.digit .segment:nth-child(1) {
+  top:10px;
+  left:20px;
+  right:20px;
+  height:10px;
+}
+
+.digit .segment:nth-child(2) {
+  top:20px;
+  right:10px;
+  width:10px;
+  height:75px;
+  height:calc(50% - 25px);
+}
+
+.digit .segment:nth-child(3) {
+  bottom:20px;
+  right:10px;
+  width:10px;
+  height:75px;
+  height:calc(50% - 25px);
+}
+
+.digit .segment:nth-child(4) {
+  bottom:10px;
+  right:20px;
+  height:10px;
+  left:20px;
+}
+
+.digit .segment:nth-child(5) {
+  bottom:20px;
+  left:10px;
+  width:10px;
+  height:75px;
+  height:calc(50% - 25px);
+}
+
+.digit .segment:nth-child(6) {
+  top:20px;
+  left:10px;
+  width:10px;
+  height:75px;
+  height:calc(50% - 25px);
+}
+
+.digit .segment:nth-child(7) {
+  bottom:95px;
+  bottom:calc(50% - 5px);
+  right:20px;
+  left:20px;
+  height:10px;
+}

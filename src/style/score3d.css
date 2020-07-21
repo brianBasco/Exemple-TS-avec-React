@@ -1,0 +1,28 @@
+ 
+.unScore3d  .cube {
+    font-size: 4.5em;
+    width: 2em;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: all ease-in-out 1s;
+}
+  
+  
+.unScore3d .side {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: rgb(255, 255, 255);
+    border: 2px solid black;
+    text-align: center;
+    line-height: 2em;
+    color: black;
+}
+  
+.unScore3d .front {transform: translateZ(1em);}
+.unScore3d .top {transform: rotateX(90deg) translateZ(1em);}
+.unScore3d .right {transform: rotateY(90deg) translateZ(1em);}
+.unScore3d .left {transform: rotateY(-90deg) translateZ(1em);}
+.unScore3d.bottom {transform: rotateX(-90deg) translateZ(1em);}
+.unScore3d .back {transform: rotateY(-180deg) translateZ(1em);}
